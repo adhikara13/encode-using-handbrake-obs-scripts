@@ -28,8 +28,10 @@ def frontend_event_handler(data):
                 convert = pathlib.Path(Data.OutputConvert)
                 namefile = pathlib.Path(thefile).stem
                 subprocess.run(fr'explorer /select,{thefile}')
-                cmd = fr'{cli} --preset "{Data.PresetList}" -i "{thefile}" -o "{convert}\{namefile}.m4v"'
-                subprocess.Popen(["powershell", "-Command", cmd])
+                cmd = fr'if ({cli} --preset "{Data.PresetList}" -i "{thefile}" -o "{convert}\{namefile}.m4v") {{explorer /select,{convert}\{namefile}.m4v}}'
+                converting = subprocess.Popen(["powershell", "-Command", cmd])
+                print(converting.pid)
+                
                 
         return True
 
