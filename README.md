@@ -8,26 +8,28 @@
 </p>
 
 ## :floppy_disk: Requirements
-* HandBrakeCLI.exe [Link](https://handbrake.fr/downloads2.php)
+* To use this plugin, you will need to have the HandBrakeCLI.exe file downloaded onto your computer. You can find the download link for this file in the resources section below. HandBrakeCLI.exe [Link](https://handbrake.fr/downloads2.php)
+
 
 ## :open_book: Usage
-* Load the python code by going to Tools -> Scripts and choose `obs_to_handbrake.py` code that you've downloaded from this repository.
-* Load the HandBrakeCLI.exe downloaded in your computer.
-* Choose folder where the recordings are saved into.
-* Choose folder where you want the converted video be saved into.
-* Pick preset.
+To use the OBStoHandBrake plugin, follow these steps:
+* Load the Python code by going to Tools -> Scripts and selecting the obs_to_handbrake.py file that you downloaded from this repository.
+* Load the HandBrakeCLI.exe file that you downloaded onto your computer.
+* Choose the folder where your video recordings are saved.
+* Choose the folder where you want the converted video to be saved.
+* Pick a preset from the list.
 
-## :newspaper: Decision
+## :newspaper: The Decision
 
-Why i decided to create this plugin, all was started with the fact that i was in need to use OBS for video recording and want to use the comfy of Handbrake for converting / encoding video that has been recorded. In the first time, i tried to use Handbrake GUI but then understood that it's pretty slow in my computer, so that's why i decided to find an alternative for it and found Handbrake CLI, which is for me what i needed the most.
+I decided to create this plugin because I needed a way to use OBS for video recording and then easily convert those recordings using HandBrake. Initially, I tried using HandBrake's GUI, but found it to be too slow on my computer. That's when I discovered HandBrake CLI, which was exactly what I needed.
 
-### :bookmark_tabs: Long story short
+## :bookmark_tabs: Long story short
 
-The things is i want to make it automated using python, because i don't want to run a command everytime i need my video recording to be converted. So then i started to browse the internet and stackoverflow to find solution but didn't find one that's related to handbrake CLI. However one repo from dustractor was really interested for me because he made a script to open the folder to the file that has just been recorded in OBS. 
+I wanted to automate the process of converting my video recordings, so I started looking for a solution online. While browsing through GitHub, I stumbled upon a repository by dustractor that contained a script to open the folder where a just-recorded OBS file was saved. I realized that this code could be really helpful to me, so I decided to fork the repository and modify it to include built-in presets.
 
-### :page_with_curl: Continuation 
+## :page_with_curl: Continuation 
 
-After that i realized that this code really would be helpful for me, and i decided to fork the repo and modified it.
+I have already added the built-in presets, but there is still a bug that needs to be fixed. Currently, there is no default preset, so you have to choose one from the list before you can use the plugin. Additionally, the script sometimes doesn't run properly and needs to be refreshed before it will work.
 
 #### :bookmark: Modification
 	
@@ -37,5 +39,4 @@ After that i realized that this code really would be helpful for me, and i decid
   * Fix bug.
 
 #### :lady_beetle: Bug
-1) There's no default preset, need to choose from the list first in order to use.
-2) Somehow can't run the script right away, have to refresh the plugin first in order it to be worked.
+There is currently no default preset, so you must choose one from the list before using the plugin. Additionally, sometimes the script doesn't run properly and needs to be refreshed. I plan to fix these issues in the near future.
